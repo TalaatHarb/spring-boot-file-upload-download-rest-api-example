@@ -2,6 +2,8 @@
 
 **Tutorial**: [Uploading an Downloading files with Spring Boot](https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/)
 
+> **This branch demonstrates how to store the files in MySQL database.**
+
 ## Steps to Setup
 
 **1. Clone the repository** 
@@ -10,15 +12,17 @@
 git clone https://github.com/callicoder/spring-boot-file-upload-download-rest-api-example.git
 ```
 
-**2. Specify the file uploads directory**
+**2. Configure MySQL database**
 
-Open `src/main/resources/application.properties` file and change the property `file.upload-dir` to the path where you want the uploaded files to be stored.
+Create a MySQL database named `file_demo`, and change the username and password in `src/main/resources/application.properties` as per your MySQL
+installation -
 
+```properties
+spring.datasource.username= <YOUR MYSQL USERNAME>
+spring.datasource.password= <YOUR MYSQL PASSWORD>
 ```
-file.upload-dir=/Users/callicoder/uploads
-```
 
-**2. Run the app using maven**
+**3. Run the app using maven**
 
 ```bash
 cd spring-boot-file-upload-download-rest-api-example
